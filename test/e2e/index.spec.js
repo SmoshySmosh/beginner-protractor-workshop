@@ -1,6 +1,10 @@
+var IndexPage = require('./IndexPage');
+
 describe('Login Form', function () {
+    var page = new IndexPage();
+
     beforeEach(function () {
-        browser.get('/app');
+        page.get();
     });
 
     describe('basics', function () {
@@ -9,17 +13,15 @@ describe('Login Form', function () {
         });
 
         it('should display the forgot password link', function () {
-            var forgotLink = element(by.linkText('Forgot your password?'));
-            expect(forgotLink.isPresent()).toBe(true);
+            expect(page.forgotLink.isPresent()).toBe(true);
         });
 
         it('should display the expected submit button text', function () {
-            var submitBtn = element(by.buttonText('Log in'));
-            expect(submitBtn.isPresent()).toBe(true);
+            expect(page.submitBtn.isPresent()).toBe(true);
         });
 
         it('should go to /forgot when clicking the forgot link', function () {
-            element(by.linkText('Forgot your password?')).click();
+            page.forgotLink.click();
             expect(browser.getLocationAbsUrl()).toBe('/forgot');
         });
     });
