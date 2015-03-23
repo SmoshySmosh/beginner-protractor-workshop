@@ -1,0 +1,15 @@
+<form class="form-login">
+    <h2 class="form-login-heading">Reset Password</h2>
+    <div class="form-group">
+        <label for="inputEmail">Email Address</label>
+        <input id="inputEmail"
+               type="email"
+               class="form-control"
+               placeholder="Email Address"
+               ng-model="user.email"
+               required
+               autofocus />
+    </div>
+    <button type="submit" class="btn btn-lg btn-primary btn-block" ng-click="submit()">Request Password</button>
+    <a id="cancelForgot" href="#/">Back to Login</a>
+</form>

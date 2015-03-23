@@ -1,0 +1,18 @@
+{
+    "name": "beginner-protractor-workshop",
+    "version": "0.0.1",
+    "description": "An introduction to Protractor",
+    "main": "index.js",
+    "scripts": {
+        "start": "serve",
+        "test": "protractor test/protractor.conf.js"
+    },
+    "keywords": [],
+    "author": "Ethan Pursley <ethan.k.pursley@gmail.com> (http://ethanpursley.com/)",
+    "license": "MIT",
+    "dependencies": {
+        "angular": "^1.3.14",
+        "angular-route": "^1.3.14",
+        "bootstrap": "^3.3.2"
+    }
+}
