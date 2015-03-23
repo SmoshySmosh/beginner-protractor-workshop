@@ -1,10 +1,15 @@
-var IndexPage = require('./IndexPage');
+var IndexPage  = require('./IndexPage');
+var Screenshot = require('../screenshot');
 
 describe('Login Form', function () {
     var page = new IndexPage();
 
     beforeEach(function () {
         page.get();
+    });
+
+    afterEach(function () {
+        Screenshot.takeScreenshot(jasmine.getEnv().currentSpec);
     });
 
     describe('basics', function () {
